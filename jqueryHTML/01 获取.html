@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js"></script>
+</head>
+<body>
+<!--
+text() 设置或返回所选元素的内容
+html() 设置或返回所选元素的内容（包括HTML标记）
+val() 设置或返回表单字段的值
+attr() 设置或返回元素的属性值
+-->
+<p id="text">这是段落中的<b>粗体</b>文本</p>
+<button id="btn1">显示文本</button>
+<button id="btn2">显示HTML</button>
+<input id="input" type="text" placeholder="请输入">
+<button id="btn3">获取input框里的值</button>
+<a id="w3s" href="http://www.w3school.com.cn">w3schoool</a>
+<button id="btn4">获取a元素中的href值</button>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            alert("Text："+$("#text").text());
+        })
+        $("#btn2").click(function () {
+            alert("Text："+$("#text").html());
+        })
+        $("#btn3").click(function () {
+            alert("Value："+$("#input").val());
+        })
+        $("#btn4").click(function () {
+            alert($("#w3s").attr("href"))
+        })
+    })
+</script>
+</body>
+</html>

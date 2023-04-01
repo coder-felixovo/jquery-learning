@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同胞</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+        /*
+        * siblings() 方法返回被选元素的所有同胞元素
+        * next() 方法返回被选元素的下一个同胞元素 该方法只返回一个元素
+        * nextAll() 方法返回被选元素的所有跟随的同胞元素
+        * nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素
+        * prev(), prevAll() 以及 prevUntil()方法 返回的是前面的同胞元素
+        * */
+        $(document).ready(function(){
+            $("#btn1").click(function () {
+                // $("span").siblings().css("color","pink")
+                $("span").siblings("p").css("color","pink")
+            })
+            $("#btn2").click(function () {
+                $("span").next().css("color","pink")
+            })
+            $("#btn3").click(function () {
+                $("span").nextAll().css("color","pink")
+            })
+            $("#btn4").click(function () {
+                $(".p2").nextUntil(".h32").css("color","pink")
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="btn1">siblings()</button>
+<button id="btn2">next()</button>
+<button id="btn3">nextAll()</button>
+<button id="btn4">nextUntil()</button>
+<div>
+    <p>p1</p>
+    <p class="p2">p2</p>
+    <span>span</span>
+    <h3>h3</h3>
+    <h3 class="h32">h3</h3>
+</div>
+</body>
+</html>

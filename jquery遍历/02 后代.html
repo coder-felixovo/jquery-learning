@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后代</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+        /*
+        * children() 方法返回被选元素的所有直接子元素 该方法只会向下一级对 DOM 树进行遍历
+        * find() 方法返回被选元素的后代元素，一路向下直到最后一个后代
+        * */
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                console.log($("#father").children())
+                $("#father").children().css("background-color","red")
+            })
+            $("#btn2").click(function () {
+                console.log($("#father").children("#son2")) // 过滤
+                $("#father").children("#son2").css("background-color","red")
+            })
+            $("#btn3").click(function () {
+                console.log($("#father").find("*"))
+                $("#father").find().css("background-color","red")
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="btn1">children()</button>
+<button id="btn2">children(过滤)</button>
+<button id="btn3">find()</button>
+<div id="grandfather" style="width: 500px;height: 500px;background-color: bisque">
+    <div id="father" style="width:300px;height: 300px;background-color: pink">
+        <div id="son1" style="width:100px;height: 100px;background-color: aliceblue">
+            <div id="grandson" style="width:50px;height: 50px;background-color: green"></div>
+        </div>
+        <div id="son2" style="width:100px;height: 100px;margin-top:10px;background-color: aliceblue">
+        </div>
+    </div>
+</div>
+</body>
+</html>

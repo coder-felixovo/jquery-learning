@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chaining</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+        /*
+        * Chaining 允许我们在一条语句中允许多个 jQuery 方法（在相同的元素上）。
+        * */
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").css("color","red").slideUp(3000).slideDown(3000)
+            })
+        })
+    </script>
+</head>
+<body>
+<button>点击先变文字颜色，再上滑，再下滑</button>
+<p>jQuery</p>
+</body>
+</html>

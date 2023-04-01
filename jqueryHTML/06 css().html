@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06 css()</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        // css() 方法设置或返回被选元素的一个或多个样式属性
+        // 返回指定css属性 语法 css("propertyname")
+        // 设置指定css属性 语法 css("propertyname","value")
+        $(document).ready(function (){
+            $("#btn1").click(function(){
+                alert($("#p1").css("background-color"))
+            })
+            $("#btn2").click(function (){
+                // $("#p1").css("width","100px") // 设置单个css属性
+                // 设置多个css属性
+                $("#p1").css({"width":"100px","height":"100px"})
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="btn1">返回id=p1的css样式属性</button>
+<button id="btn2">设置css属性</button>
+<p id="p1" style="background-color: aquamarine">paragraph1</p>
+</body>
+</html>

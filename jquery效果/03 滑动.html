@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+        /* 语法
+        * $(selector).slideDown(speed,callback) 向下滑动元素
+        * $(selector).slideUp(speed,callback) 向上滑动元素
+        * $(selector).slideToggle(speed,callback) 可以在 slideDown() 与 slideUp() 方法之间进行切换
+        * speed 取值："slow" "fast" 毫秒
+        * callback fading 完成后所执行的函数名称
+        * */
+        // $(document).ready(function () {
+        //     $("#slidedown").click(function () {
+        //         $("#panel").slideDown()
+        //     })
+        // })
+        // $(document).ready(function () {
+        //     $("#slidedown").click(function () {
+        //         $("#up_panel").slideUp()
+        //     })
+        // })
+        $(document).ready(function () {
+            $("#slidedown").click(function () {
+                $("#panel").slideToggle()
+            })
+        })
+    </script>
+    <style type="text/css">
+        #up_panel {
+            width: 300px;
+            height: 50px;
+            background: antiquewhite;
+        }
+        #slidedown {
+            width: 300px;
+            height: 30px;
+            background: aquamarine;
+            text-align: center;
+        }
+        #panel {
+            display: none;
+            width: 300px;
+            height: 50px;
+            background: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="up_panel"></div>-->
+<button id="slidedown">向下滑动</button>
+<div id="panel"></div>
+</body>
+</html>

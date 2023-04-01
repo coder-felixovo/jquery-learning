@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // text()、html() 以及 val() 的回调函数
+            $("#btn1").click(function () {
+                $("#p1").text(function (i,origText) {
+                    return "旧文本："+ origText +"新文本：Hello World (index："+ i +")"
+                })
+            })
+            // attr() 方法也用于设置/改变属性值
+            $("#btn2").click(function () {
+                $("a").attr({
+                    "href":"http://www.baidu.com",
+                    "title":"baidu",
+                }).text("百度")
+            })
+            // attr()回调函数同上
+        })
+    </script>
+</head>
+<body>
+<button id="btn1">click1</button>
+<button id="btn2">click2</button>
+<p id="p1">这是一段文本</p>
+<a href="http://www.w3school.com.cn">w3school</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+        /* 语法
+        * $(selector).animate({params},speed,callback)
+        * params 必需的 参数定义形成动画的 CSS 属性
+        * speed 可选的 参数规定效果的时长 它可以取以下值："slow"、"fast" 或毫秒
+        * callback 可选的 参数是动画完成后所执行的函数名称
+        * */
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                // params参数 可以是多个属性
+                // 可以使用相对值 例如 height:'+=50px'
+                // 可以使用预定值 例如 height:'toggle'
+                // 可以使用队列功能 多个animate调用
+                $("div").animate({left:'300px',opacity:'0.5',width:'100px',height:'100px'})
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="btn">开始动画</button>
+<div id="div" style="position: relative;width: 50px;height: 50px;background: antiquewhite"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        /*
+        * addClass() 向被选元素添加一个或多个类
+        * removeClass() 从被选元素删除一个或多个类
+        * toggleClass() 对被选元素进行添加/删除类的切换操作
+        * css() 设置或返回样式属性
+        * */
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#p1,#p2").addClass("pink")
+                $("#p3").addClass("pink font")
+            })
+            $("#btn2").click(function (){
+                $("#p3").removeClass("font");
+            })
+            $("#btn3").click(function (){
+                $("#p3").toggleClass("bgr")
+            })
+        })
+    </script>
+    <style type="text/css">
+        .pink {
+            color: pink;
+        }
+        .font {
+            font-size: 24px;
+        }
+        .bgr {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+<button id="btn1">addClass</button>
+<button id="btn2">removeClass</button>
+<button id="btn3">toggleClass</button>
+<p id="p1">你好</p>
+<p id="p2">Hello</p>
+<p id="p3">这是段落</p>
+</body>
+</html>

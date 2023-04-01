@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        /* 添加新的HTML内容
+        * append() 在被选元素的结尾插入内容
+        * prepend() 在被选元素的开头插入内容
+        * after() 在被选元素之后插入内容
+        * before() 在被选元素之前插入内容
+        * */
+        $(document).ready(function () {
+            $("#append").click(function () {
+                $("p").append("<p>appended text</p>")
+                $("ol").append("<li>Appended item</li>");
+            })
+            $("#prepend").click(function () {
+                $("p").prepend("<p>prepended text</p>")
+                $("ol").prepend("<li>prepended item</li>");
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="append">append</button>
+<button id="prepend">prepend</button>
+<button id="after">after</button>
+<button id="before">before</button>
+<p>This is a paragraph.&nbsp</p>
+<ol>
+    <li>li1</li>
+    <li>li2</li>
+</ol>
+</body>
+</html>

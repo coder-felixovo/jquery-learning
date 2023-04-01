@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        /* 删除已有的html元素
+        * remove() 删除被选元素及其子元素
+        * empty() 删除被选元素的子元素
+        * remove() 可以写入参数，对被删除元素过滤
+        * */
+        $(document).ready(function () {
+            $("#remove").click(function () {
+                $("div").remove()
+            })
+            $("#empty").click(function () {
+                $("div").empty()
+            })
+            $("#remove_filter").click(function () {
+                $("p").remove(".filter")
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="remove">remove</button>
+<button id="empty">empty</button>
+<button id="remove_filter">remove_filter</button>
+<div style="border: 1px solid tomato;width: 300px;height: 300px">
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+    <p class="filter">paragraph filter</p>
+</div>
+</body>
+</html>

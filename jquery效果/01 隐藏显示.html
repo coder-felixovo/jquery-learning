@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏显示</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+        /* 语法
+        * $(selector).hide(speed,callback); 隐藏元素
+        * $(selector).show(speed,callback); 显示元素
+        * $(selector).toggle(speed,callback); 隐藏或显示元素
+        * speed 隐藏/显示 速度 取值："slow" "fast" 毫秒
+        * callback 隐藏/显示完成后所执行的函数
+        * */
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("#p_demo").hide("slow", function () {
+                    console.log("段落隐藏")
+                })
+            })
+            $("#show").click(function () {
+                $("#p_demo").show("slow", function () {
+                    console.log("段落显示")
+                })
+            })
+            $("#toggle").click(function () {
+                $("#p_demo2").toggle("slow",function () {
+                    console.log("段落显示或隐藏")
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<p id="p_demo">点击按钮隐藏或显示文本</p>
+<button id="hide">隐藏</button>
+<button id="show">显示</button>
+<br/>
+<p id="p_demo2">toggle()显示隐藏文本</p>
+<button id="toggle">显示/隐藏</button>
+</body>
+</html>

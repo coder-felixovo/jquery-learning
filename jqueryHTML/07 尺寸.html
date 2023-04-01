@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尺寸</title>
+    <script src="../../../jQueryLearning/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            // width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）
+            // height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）
+            $("#btn1").click(function (){
+                var txt = ""
+                txt += "width: " + $("#div1").width() + "<br/>"
+                txt += "height: " + $("#div1").height()
+                $("#div1").html(txt)
+            })
+            // innerWidth() 方法返回元素的宽度（包括内边距）
+            // innerHeight() 方法返回元素的高度（包括内边距）
+            $("#btn2").click(function (){
+                var txt = ""
+                txt += "inner width: " + $("#div1").innerWidth() + "<br/>"
+                txt += "inner height: " + $("#div1").innerHeight()
+                $("#div1").html(txt)
+            })
+            // outerWidth() 方法返回元素的宽度（包括内边距和边框）
+            // outerHeight() 方法返回元素的高度（包括内边距和边框）
+            $("#btn3").click(function (){
+                var txt = ""
+                txt += "outer width: " + $("#div1").outerWidth() + "<br/>"
+                txt += "outer height: " + $("#div1").outerHeight()
+                $("#div1").html(txt)
+            })
+            // outerWidth(true) 方法返回元素的宽度（包括内边距、边框和外边距）
+            // outerHeight(true) 方法返回元素的高度（包括内边距、边框和外边距）
+            $("#btn4").click(function (){
+                var txt = ""
+                txt += "outer width(+margin): " + $("#div1").outerWidth(true) + "<br/>"
+                txt += "outer height(+margin): " + $("#div1").outerHeight(true)
+                $("#div1").html(txt)
+            })
+            // 返回文档和窗口的宽度和高度
+            $("#btn5").click(function () {
+                var txt="";
+                txt+="Document width/height: " + $(document).width();
+                txt+="x" + $(document).height() + "\n";
+                txt+="Window width/height: " + $(window).width();
+                txt+="x" + $(window).height();
+                alert(txt);
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="btn1">width() 和 height()</button>
+<button id="btn2">innerWidth() 和 innerHeight()</button>
+<button id="btn3">outerWidth() 和 outerHeight()</button>
+<button id="btn4">outerWidth(true) 和 outerHeight(true)</button>
+<button id="btn5">返回文档和窗口的宽度和高度</button>
+<div id="div1" style="width: 200px;height: 200px;padding: 10px;border: 1px solid tomato;
+margin: 5px;background-color: aliceblue;color: pink"></div>
+</body>
+</html>
